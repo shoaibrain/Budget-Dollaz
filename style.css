@@ -1,7 +1,5 @@
-/**********************************************
-*** GENERAL
-**********************************************/
 
+/* Clearing default styling | Normalization */
 * {
     margin: 0;
     padding: 0;
@@ -15,25 +13,28 @@
 }
 
 body {
-    color: #555;
+    color: rgb(8, 8, 8);
+    background-color: #e7e5e5;
     font-family: Open Sans;
     font-size: 16px;
     position: relative;
     height: 100vh;
     font-weight: 400;
+    margin: 0 auto;
+    width: 75%;
 }
 
 .right { float: right; }
-.red { color: #FF5049 !important; }
+.red { color: #ec524c !important; }
 .red-focus:focus { border: 1px solid #FF5049 !important; }
 
-/**********************************************
-*** TOP PART
-**********************************************/
+
+/* Budget app Home | Main */
 
 .top {
-    height: 40vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    height: 45vh;
+    
+    background-image: linear-gradient(rgba(5, 53, 53, 0.835), rgba(228, 127, 127, 0.35));
     background-size: cover;
     background-position: center;
     position: relative;
@@ -45,14 +46,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: rgb(255, 226, 226);
 }
 
 .budget__title {
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: 320;
 }
 
 .budget__value {
@@ -71,18 +72,18 @@ body {
 
 .budget__income {
     margin-bottom: 10px;
-    background-color: #28B9B5;
+    background-color: #32925f;
 }
 
 .budget__expenses {
-    background-color: #FF5049;
+    background-color: #df7d79;
 }
 
 .budget__income--text,
 .budget__expenses--text {
     float: left;
     font-size: 13px;
-    color: #444;
+    color: rgb(42, 40, 40);
     margin-top: 2px;
 }
 
@@ -108,11 +109,6 @@ body {
 }
 
 
-/**********************************************
-*** BOTTOM PART
-**********************************************/
-
-/***** FORM *****/
 .add {
     padding: 14px;
     border-bottom: 1px solid #e7e7e7;
@@ -170,7 +166,7 @@ body {
 .add__description:focus,
 .add__value:focus {
     outline: none;
-    border: 1px solid #28B9B5;
+    border: 1px solid #5cc532;
 }
 
 .add__btn:focus { outline: none; }
@@ -179,27 +175,33 @@ body {
 .container {
     width: 1000px;
     margin: 60px auto;
+    text-align: center;
 }
 
 .income {
     float: left;
     width: 475px;
     margin-right: 50px;
+    cursor: pointer;
 }
 
 .expenses {
     float: left;
     width: 475px;
+    cursor: pointer;
 }
 
 h2 {
     text-transform: uppercase;
+    text-decoration: underline;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
+    letter-spacing: 2px;
+    line-height: 1.8;
 }
 
-.icome__title { color: #28B9B5; }
+.icome__title { color: #469743; }
 .expenses__title { color: #FF5049; }
 
 .item {
@@ -219,7 +221,9 @@ h2 {
     transition: transform 0.3s;
 }
 
+/* Featured Turned off */
 .item__percentage {
+    display: none;
     float: left;
     margin-left: 20px;
     transition: transform 0.3s;
